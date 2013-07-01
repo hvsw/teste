@@ -1,0 +1,15 @@
+RewriteEngine On
+RewriteBase /
+#RewriteCond %{SCRIPT_FILENAME} !-f
+#RewriteCond %{SCRIPT_FILENAME} !-d
+
+RewriteRule ^(?!myadmin)(.*)$ index.php?r=$1
+RewriteRule ^\bmyadmin\b(.*)$ myadmin$1
+
+#RewriteRule ^(?!admin|user)(.*)$ index.php?module=default&url=$1
+
+#RewriteRule ^\badmin\b(.*)$ index.php?module=admin&url=$1
+
+#RewriteRule ^\bphpmyadmin\b(.*)$ myadmin/$1
+
+#RewriteRule ^(.*)$ index.php?r=$1
